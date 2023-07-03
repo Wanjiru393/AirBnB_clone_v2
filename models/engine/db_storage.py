@@ -20,11 +20,6 @@ class DBStorage:
     __engine = None
     __session = None
 
-    """
-    To set the environment variables, depending on your operating system:
-    export MY_VARIABLE=<MY_VARIABLE_VALUE>  (Linux)
-    set MY_VARIABLE=<MY_VARIABLE_VALUE>  (Windows)
-    """
 
     def __init__(self):
         """Initialize object"""
@@ -45,15 +40,7 @@ class DBStorage:
             Base.metadata.drop_all(self.__engine)
 
     def all(self, cls=None):
-        """Gets all objects depending on the class name"""
-        # from models.base_model import BaseModel
-        # from models.user import User
-        # from models.place import Place
-        # from models.state import State
-        # from models.city import City
-        # from models.amenity import Amenity
-        # from models.review import Review
-
+       
         classes = {
             'User': User, 'Place': Place,
             'State': State, 'City': City, 'Amenity': Amenity,
